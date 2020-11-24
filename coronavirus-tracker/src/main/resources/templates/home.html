@@ -1,0 +1,22 @@
+<html>
+<body>
+<h1>CoronaVirus Cases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Country</th>
+      <th>Total Reported Cases</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="locationStat: ${locationStats}">
+      <td th:text="${locationStat.state}" ></td> 
+      <td th:text="${locationStat.country}"  ></td>
+      <td th:text="${locationStat.latestTotalCases} ">0</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
